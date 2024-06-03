@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+	    @media screen and (max-width: 768px) {
+        /* Rotate the image clockwise by 90 degrees */
+        img {
+            transform: rotate(90deg);
+        }
+    }
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300&display=swap');
 
         body {
@@ -17,6 +24,8 @@
             text-align: center;
         }
         .carousel-item img {
+			max-width: 100%;
+			height: auto;
             width: 100%;
             height: 100vh;
             object-fit: cover;
