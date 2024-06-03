@@ -11,21 +11,9 @@
     /* Rotate the image clockwise by 90 degrees */
     img {
         transform: rotate(90deg);
-        width: 100%;
-        height: auto;
-    }
-
-    /* Rotate the entire content */
-    .content {
-        transform: rotate(-90deg) translateY(-100%);
-        transform-origin: right top;
         width: 100vh; /* Set width to the height of the viewport */
         height: 100vw; /* Set height to the width of the viewport */
-        overflow-x: hidden; /* Hide horizontal overflow */
-        overflow-y: auto; /* Allow vertical scrolling */
-        position: fixed; /* Keep the content fixed */
-        top: 100%; /* Push the content to the bottom */
-        left: 0; /* Align the content to the left */
+        object-fit: cover; /* Ensure the image covers the entire container */
     }
 }
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300&display=swap');
