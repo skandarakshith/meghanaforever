@@ -81,14 +81,21 @@
         }
         .popup {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-content {
+            background: #fff;
             padding: 20px;
             border-radius: 10px;
-            color: #fff;
-            z-index: 999;
+            text-align: center;
         }
         .popup button {
             background-color: #007bff;
@@ -157,7 +164,7 @@
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             var popup = document.createElement('div');
             popup.classList.add('popup');
-            popup.innerHTML = "<p>Please switch to Desktop view in your browser settings.</p><button onclick='closePopup()'>OK</button>";
+            popup.innerHTML = "<div class='popup-content'><p>Please switch to Desktop view in your browser settings.</p><button onclick='closePopup()'>OK</button></div>";
             document.body.appendChild(popup);
         }
 
