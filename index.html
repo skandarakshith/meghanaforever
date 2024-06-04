@@ -16,11 +16,13 @@
             background-color: #f8f9fa;
             text-align: center;
         }
+
         .carousel-item img {
             width: 100%;
             height: 100vh;
             object-fit: cover;
         }
+
         .content {
             position: absolute;
             top: 50%;
@@ -30,42 +32,50 @@
             padding: 20px;
             border-radius: 10px;
         }
+
         .title {
             font-family: 'Great Vibes', cursive;
             font-size: 48px;
             color: #884f01;
             margin-bottom: 20px;
         }
+
         .subtitle {
             font-size: 28px;
             color: #f1c40f;
             margin-bottom: 20px;
         }
+
         .quote {
             font-style: italic;
             font-size: 20px;
             color: #ecf0f1;
             margin-bottom: 20px;
         }
+
         .details-container {
             display: flex;
             justify-content: space-around;
             margin-bottom: 20px;
             align-items: center;
         }
+
         .details {
             font-size: 18px;
             text-align: left;
             width: 45%;
         }
+
         .venue-details, .qr-code a img {
             margin-bottom: 10px;
         }
+
         .qr-code a img {
             width: 100px;
             height: 100px;
-			margin-left: 10%;
+            margin-left: 10%;
         }
+
         .footer {
             font-size: 18px;
             color: #ecf0f1;
@@ -74,35 +84,41 @@
 
         /* Mobile specific styles */
         @media screen and (max-width: 768px) {
-            body {
-                overflow: hidden; /* Prevent scrolling */
+            body, html {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
             }
 
-            /* Rotate the carousel item images */
             .carousel-item img {
-                transform: rotate(90deg);
-                width: 100vh; /* Set width to the height of the viewport */
-                height: 100vw; /* Set height to the width of the viewport */
-                object-fit: cover; /* Ensure the image covers the entire container */
+                transform: rotate(90deg) translateX(50%);
+                transform-origin: center center;
+                width: 100vh;
+                height: 100vw;
+                object-fit: cover;
             }
 
-            /* Rotate the entire content */
             .content {
-                transform: rotate(90deg);
-                transform-origin: left top;
-                width: 100vh; /* Set width to the height of the viewport */
-                height: 100vw; /* Set height to the width of the viewport */
-                overflow-x: hidden; /* Hide horizontal overflow */
-                overflow-y: auto; /* Allow vertical scrolling */
-                position: absolute; /* Position absolutely */
+                position: absolute;
                 top: 0;
                 left: 0;
+                width: 100vw;
+                height: 100vh;
+                transform: rotate(90deg);
+                transform-origin: center center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
             }
 
-            /* Rotate text elements within content */
-            .title, .quote, .details-container, .footer {
-                writing-mode: vertical-rl; /* Rotate text vertically */
-                transform: rotate(180deg); /* Flip text to be readable */
+            .title, .subtitle, .quote, .details-container, .footer {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                color: #000; /* Change color for better visibility */
             }
         }
     </style>
@@ -136,41 +152,31 @@
             <div class="details">
                 <p>Muhurtham: July 7th 2024, 8-22 AM</p>
                 <p class="venue-details">Venue: Daivagna Sabha Bhavana</p>
-				<p class="venue-details">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tarikere Road, Bhadravathi</p>
+                <p class="venue-details">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tarikere Road, Bhadravathi</p>
                 <div class="qr-code">
                     <a href="https://www.google.com/maps/place/Deivagna+Sabha+Bhavana/@13.8447023,75.7105144,19.25z/data=!4m15!1m8!3m7!1s0x3bbb0004bae5616f:0x5eab5b9250ba013e!2sBhadravathi,+Karnataka!3b1!8m2!3d13.8275718!4d75.7063783!16zL20vMDh3aGpx!3m5!1s0x3bbb001e7e7e2843:0x6046a6c554e366c8!8m2!3d13.8441441!4d75.7111618!16s%2Fg%2F11fy2ptpyl?entry=ttu" target="_blank">
                         <img src="Deivagna.png" alt="Wedding QR Code">
                     </a>
                 </div>
-				<p style="margin-left:10%">click here</p>
+                <p style="margin-left:10%">click here</p>
             </div>
             <div class="details">
                 <p>Reception Date: July 8th 2024, 11-00 AM</p>
                 <p class="venue-details">Venue: Brahma Samudra Shri Ranganna Kalyana Mantapa</p>
-				<p class="venue-details">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Basavanahalli Road, Chikkamagaluru</p>
+                <p class="venue-details">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Basavanahalli Road, Chikkamagaluru</p>
                 <div class="qr-code">
                     <a href="https://www.google.com/maps/place/Brahma+Samudra+Shri+Ranganna+Kalyana+Mantapa+%2F+Choultry/@13.326876,75.7719977,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbad9d9a42abc5f:0x8b62a7d21c604973!8m2!3d13.326876!4d75.7745726!16s%2Fg%2F11bxjmjzw8?entry=ttu" target="_blank">
                         <img src="Ranganna.png" alt="Reception QR Code">
                     </a>
                 </div>
-				<p style="margin-left:10%">click here</p>
+                <p style="margin-left:10%">click here</p>
             </div>
         </div>
-        <div class="footer">We look forward to celebrating with you! - Skanda & Meghana</div>
+        <div class="footer">We hope to see you there!</div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.carousel').carousel({
-            interval: 5000
-        });
-
-    });
-</script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
