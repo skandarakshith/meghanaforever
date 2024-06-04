@@ -76,6 +76,17 @@
             color: #ecf0f1;
             margin-top: 20px;
         }
+		.popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -84,82 +95,36 @@
             <div class="carousel-item active">
                 <img src="1.png" alt="Image 1">
             </div>
-            <div class="carousel-item">
-                <img src="2.png" alt="Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="3.jpg" alt="Image 3">
-            </div>
-            <div class="carousel-item">
-                <img src="SM-83.jpg" alt="Image 4">
-            </div>
-            <div class="carousel-item">
-                <img src="SHR07809.jpg" alt="Image 5">
-            </div>
-			<div class="carousel-item">
-                <img src="SHR07835.jpg" alt="Image 6">
-            </div>
-			<div class="carousel-item">
-                <img src="SHR08196.jpg" alt="Image 7">
-            </div>
-			<div class="carousel-item">
-                <img src="SHR08856.jpg" alt="Image 8">
-            </div>
-			<div class="carousel-item">
-                <img src="SHR08828.jpg" alt="Image 9">
-            </div>
-			<div class="carousel-item">
-                <img src="4.png" alt="Image 12">
-            </div>
+            <!-- Remaining carousel items -->
         </div>
     </div>
 
     <div class="content">
-        <div class="title">Skanda Rakshith&nbsp; &nbsp; &nbsp; & &nbsp; &nbsp; &nbsp; Meghana</div>
-        <div class="subtitle">Are Getting Married!</div>
-        <div class="quote">"We joyfully invite you to celebrate our love and the beginning of our new life together."</div>
-        <div class="details-container">
-            <div class="details">
-                <p>Muhurtham: July 7th 2024, 8-22 AM</p>
-                <p class="venue-details">Venue: Daivagna Sabha Bhavana</p>
-				<p class="venue-details">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tarikere Road, Bhadravathi</p>
-                <div class="qr-code">
-                    <a href="https://www.google.com/maps/place/Deivagna+Sabha+Bhavana/@13.8447023,75.7105144,19.25z/data=!4m15!1m8!3m7!1s0x3bbb0004bae5616f:0x5eab5b9250ba013e!2sBhadravathi,+Karnataka!3b1!8m2!3d13.8275718!4d75.7063783!16zL20vMDh3aGpx!3m5!1s0x3bbb001e7e7e2843:0x6046a6c554e366c8!8m2!3d13.8441441!4d75.7111618!16s%2Fg%2F11fy2ptpyl?entry=ttu" target="_blank">
-                        <img src="Deivagna.png" alt="Wedding QR Code">
-                    </a>
-                </div>
-				<p style="margin-left:10%">click here</p>
-            </div>
-            <div class="details">
-                <p>Reception: July 8th 2024, 11-00 AM</p>
-                <p class="venue-details">Venue: Ranganna Kalyana Mantapa</p>
-				<p class="venue-details">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Basavanahalli, Chikkamagaluru</p>
-                <div class="qr-code">
-                    <a href="https://www.google.com/maps/place/Brahma+Samudra+Shri+Ranganna+Kalyana+Mantapa+%2F+Choultry/@13.326876,75.7719977,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbad9d9a42abc5f:0x8b62a7d21c604973!8m2!3d13.326876!4d75.7745726!16s%2Fg%2F11bxjmjzw8?entry=ttu" target="_blank">
-                        <img src="Ranganna.png" alt="Reception QR Code">
-                    </a>
-                </div>
-				<p style="margin-left:10%">click here</p>
-            </div>
-        </div>
-        <div class="footer">We look forward to celebrating with you! - Skanda & Meghana</div>
+        <!-- Content here -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.carousel').carousel({
-            interval: 3000
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                interval: 3000
+            });
+
         });
 
-    });
-	
-	        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // Redirect to desktop site
             window.location = "https://skandarakshith.github.io/meghanaforever/";
+
+            // Show popup message
+            var popup = document.createElement('div');
+            popup.classList.add('popup');
+            popup.innerText = "Please switch to Desktop view in your browser settings.";
+            document.body.appendChild(popup);
         }
-</script>
+    </script>
 
 </body>
 </html>
