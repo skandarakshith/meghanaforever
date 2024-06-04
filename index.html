@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-@media screen and (max-width: 768px) {
-    /* Rotate the image clockwise by 90 degrees */
-    img {
-        transform: rotate(90deg);
-        width: 100vh; /* Set width to the height of the viewport */
-        height: 100vh; /* Set height to the height of the viewport */
-        object-fit: cover; /* Ensure the image covers the entire container */
-    }
-}
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300&display=swap');
 
         body {
@@ -27,8 +17,6 @@
             text-align: center;
         }
         .carousel-item img {
-			max-width: 100%;
-			height: auto;
             width: 100%;
             height: 100vh;
             object-fit: cover;
@@ -39,14 +27,13 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 80%;
-            background: rgb(14 1 13 / 31%);
             padding: 20px;
             border-radius: 10px;
         }
         .title {
             font-family: 'Great Vibes', cursive;
             font-size: 48px;
-            color: #9ccde0;
+            color: #884f01;
             margin-bottom: 20px;
         }
         .subtitle {
@@ -84,6 +71,40 @@
             color: #ecf0f1;
             margin-top: 20px;
         }
+
+        /* Mobile specific styles */
+        @media screen and (max-width: 768px) {
+            body {
+                overflow: hidden; /* Prevent scrolling */
+            }
+
+            /* Rotate the carousel item images */
+            .carousel-item img {
+                transform: rotate(90deg);
+                width: 100vh; /* Set width to the height of the viewport */
+                height: 100vw; /* Set height to the width of the viewport */
+                object-fit: cover; /* Ensure the image covers the entire container */
+            }
+
+            /* Rotate the entire content */
+            .content {
+                transform: rotate(90deg);
+                transform-origin: left top;
+                width: 100vh; /* Set width to the height of the viewport */
+                height: 100vw; /* Set height to the width of the viewport */
+                overflow-x: hidden; /* Hide horizontal overflow */
+                overflow-y: auto; /* Allow vertical scrolling */
+                position: absolute; /* Position absolutely */
+                top: 0;
+                left: 0;
+            }
+
+            /* Rotate text elements within content */
+            .title, .quote, .details-container, .footer {
+                writing-mode: vertical-rl; /* Rotate text vertically */
+                transform: rotate(180deg); /* Flip text to be readable */
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,10 +123,7 @@
                 <img src="SM-122.jpg" alt="Image 4">
             </div>
             <div class="carousel-item">
-                <img src="SHR08827.jpg" alt="Image 5">
-            </div>
-			            <div class="carousel-item">
-                <img src="SHR07809.jpg" alt="Image 6">
+                <img src="SM-42.jpg" alt="Image 5">
             </div>
         </div>
     </div>
@@ -128,7 +146,7 @@
             </div>
             <div class="details">
                 <p>Reception Date: July 8th 2024, 11-00 AM</p>
-                <p class="venue-details">Venue: Shri Ranganna Kalyana Mantapa</p>
+                <p class="venue-details">Venue: Brahma Samudra Shri Ranganna Kalyana Mantapa</p>
 				<p class="venue-details">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Basavanahalli Road, Chikkamagaluru</p>
                 <div class="qr-code">
                     <a href="https://www.google.com/maps/place/Brahma+Samudra+Shri+Ranganna+Kalyana+Mantapa+%2F+Choultry/@13.326876,75.7719977,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbad9d9a42abc5f:0x8b62a7d21c604973!8m2!3d13.326876!4d75.7745726!16s%2Fg%2F11bxjmjzw8?entry=ttu" target="_blank">
@@ -155,3 +173,4 @@
 
 </body>
 </html>
+
